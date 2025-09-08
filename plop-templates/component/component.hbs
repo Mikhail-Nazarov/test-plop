@@ -1,0 +1,19 @@
+import React from 'react';
+import { use{{componentName}} } from './hooks';
+
+export interface {{componentName}}Props {
+  // Добавьте необходимые пропсы здесь
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const {{componentName}} = ({ className = '', children, ...props }: {{componentName}}Props) => {
+  const { state, functions } = use{{componentName}}();
+
+  return (
+    <div className={`{{componentName}} ${className}`} {...props}>
+      <h2 className="{{componentName}}__title">{{componentName}}</h2>
+      <div className="{{componentName}}__content">{children || 'Ваш контент здесь'}</div>
+    </div>
+  );
+};

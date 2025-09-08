@@ -1,0 +1,10 @@
+import { useState, useEffect } from 'react';
+
+export const use{{componentName}} = () => {
+  const [value, setValue] = useState();
+
+  return {
+    state: { value },
+    functions: { setValue },
+  };
+};
