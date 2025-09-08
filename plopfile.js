@@ -18,26 +18,31 @@ module.exports = function (plop) {
           return true;
         },
       },
+      {
+        type: 'input',
+        name: 'path',
+        message: 'Введите где создать компонент?',
+      },
     ],
     actions: [
       {
         type: 'add',
-        path: '{{componentName}}/{{componentName}}.tsx',
+        path: `{{path}}/{{componentName}}/{{componentName}}.tsx`,
         templateFile: 'plop-templates/component/component.hbs',
       },
       {
         type: 'add',
-        path: '{{componentName}}/hooks/use{{componentName}}.ts',
+        path: `{{path}}/{{componentName}}/hooks/use{{componentName}}.ts`,
         templateFile: 'plop-templates/component/hooks/hook.hbs',
       },
       {
         type: 'add',
-        path: '{{componentName}}/hooks/index.ts',
+        path: `{{path}}/{{componentName}}/hooks/index.ts`,
         templateFile: 'plop-templates/component/hooks/index.hbs',
       },
       {
         type: 'add',
-        path: '{{componentName}}/index.ts',
+        path: `{{path}}/{{componentName}}/index.ts`,
         templateFile: 'plop-templates/component/index.hbs',
       },
     ],
